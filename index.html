@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Leaflet GeomanTriangle: Adds a triangle draw button</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@geoman-io/leaflet-geoman-free@2.5.0/dist/leaflet-geoman.css">
+    <link rel="stylesheet" href="./demo/demo.css" />
+    <script src="https://unpkg.com/leaflet@latest/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <a href="https://github.com/Falke-Design/PMLock"><img src="./demo/github-corner.png" class="githubcorner"/></a>
+    <div class="wrapper">
+
+        <article>
+            <h1 style="margin-bottom: 10px;">Leaflet <a href="https://github.com/Falke-Design/GeomanTriangle">GeomanTriangle</a>: Adds a triangle draw button</h1>
+            <span style="display: block;font-size: 19px;margin-bottom: 20px;">This is a <a href="https://github.com/geoman-io/leaflet-geoman">Leaflet Geoman</a> Subplugin</span>
+            <div class="map" id="example2"></div>
+        </article>
+        <article>
+            <br>
+            <h3><strong>Installation</strong></h3>
+            <span>Download <a href="https://raw.githubusercontent.com/Falke-Design/GeomanTriangle/master/dist/geomanTriangle.js">geomanTriangle.js</a> and include them in your project.</span>
+            <pre>&lt;script src="./dist/geomanTriangle.js"&gt;&lt;/script&gt;</pre>
+            <span>or use the script over cdn:</span>
+            <pre>&lt;script src="https://cdn.jsdelivr.net/gh/Falke-Design/GeomanTriangle/dist/geomanTriangle.js"&gt;&lt;/script&gt;</pre>
+            <br>
+            <h3><strong>Init GeomanTriangle</strong></h3>
+            <span>Create the GeomanTriangle button after Leaflet Geoman</span>
+            <pre>triangle = new L.GeomanTriangle(map)</pre>
+
+            <h3><strong>Enable draw</strong></h3>
+            <pre>map.pm.enableDraw("Triangle")</pre>
+
+            <span><strong>setText</strong></span>
+            <div>
+                <pre>triangle.setText(text)</pre>
+                <pre>text: {tooltips: {firstVertex: 'Click to place center', finish: 'Click to finish'} cancel: 'Cancel'}</pre>
+            </div>
+        </article>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@geoman-io/leaflet-geoman-free@2.5.0/dist/leaflet-geoman.min.js"></script>
+    <script src="dist/geomanTriangle.js"></script>
+    <script src="./demo/demo.js"></script>
+</body>
+
+</html>
